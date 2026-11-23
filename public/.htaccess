@@ -1,0 +1,21 @@
+Options -MultiViews
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+RewriteEngine On
+
+# Configure /api/ routing to the existing Laravel application at the host level.
+# This export does not contain an API or a PHP front controller.
+RewriteRule ^api(?:/|$) - [L]
+
+RewriteRule ^(privacy|terms)/?$ /$1.html [R=301,L]
+RewriteRule ^(privacy|terms)\.html$ - [L]
+
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+(.+)\.html(?:[?\s]) [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]

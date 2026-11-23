@@ -1,0 +1,155 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(252, 248, 239, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(141, 19, 36, 0.08);
+}
+.navbar {
+  width: min(calc(100% - 40px), 1180px);
+  margin: auto;
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.brand img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.brandName {
+  font-family: "ATC Arquette", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  line-height: 1.05;
+  color: var(--brand);
+  white-space: nowrap;
+}
+.brandName sup {
+  font:
+    700 0.55em "DM Sans",
+    sans-serif;
+  margin-left: 2px;
+  vertical-align: super;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.links a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.links a:hover,
+.links a[aria-current="page"] {
+  color: var(--brand);
+}
+.links .cta {
+  padding: 13px 22px;
+  border-radius: 8px;
+  background: var(--brand);
+  color: white;
+}
+.links .cta:hover {
+  background: var(--brand-dark);
+  color: white;
+}
+.toggle {
+  display: none;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--brand);
+  font-size: 26px;
+  cursor: pointer;
+}
+.footer {
+  background: var(--brand);
+  color: white;
+  padding: 36px 0;
+}
+.footerInner {
+  width: min(calc(100% - 40px), 1180px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.footer .brandName {
+  color: white;
+}
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  font-size: 13px;
+}
+.footerLinks a {
+  text-decoration: none;
+}
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+.footer small {
+  opacity: 0.8;
+}
+.footer a:focus-visible {
+  outline-color: white;
+}
+@media (max-width: 900px) {
+  .navbar {
+    min-height: 72px;
+  }
+  .brandName {
+    font-size: 13px;
+  }
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+  .toggle {
+    display: block;
+  }
+  .links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 16px;
+    right: 16px;
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    box-shadow: 0 20px 50px rgba(54, 20, 25, 0.14);
+  }
+  .open {
+    display: flex;
+  }
+}
+@media (max-width: 360px) {
+  .brandName {
+    font-size: 11px;
+  }
+  .navbar {
+    gap: 8px;
+  }
+}

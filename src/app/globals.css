@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "ATC Arquette";
+  src: url("/assets/ATCArquette-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --brand: #8d1324;
+  --brand-dark: #71101d;
+  --cream: #fcf8ef;
+  --text: #211719;
+  --muted: #71696a;
+  --white: #fff;
+  --container: 1180px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--cream);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+}
+img {
+  max-width: 100%;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 5px;
+}
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 2000;
+  padding: 12px 20px;
+  background: #fff;
+  color: var(--brand);
+}
+.skip-link:focus {
+  top: 12px;
+}
+.not-found {
+  max-width: 800px;
+  margin: auto;
+  padding: 80px 24px;
+  min-height: 55vh;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
