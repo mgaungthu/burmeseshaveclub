@@ -9,3 +9,4 @@ playwright-report/
 test-results/
 .DS_Store
 public/download/*.apk
+public/download/*.apk
