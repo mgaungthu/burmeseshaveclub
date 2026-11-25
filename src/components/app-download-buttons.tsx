@@ -7,23 +7,24 @@ export function AppDownloadButtons() {
       role="group"
       aria-label="Download the Burmese Shave Club app"
     >
-      <a className={styles.button} href="/download/bsc-v.1.0.apk" download>
+      <a
+        className={styles.button}
+        href="https://play.google.com/store/apps/details?id=com.burmeseshave.club"
+      >
         <svg
           className={styles.icon}
           viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
           aria-hidden="true"
           focusable="false"
         >
-          <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+          <path fill="#34a853" d="M4 2v20l10-10z" />
+          <path fill="#4285f4" d="m4 2 14 7.5-4 2.5z" />
+          <path fill="#fbbc04" d="m18 9.5 4 2.5-4 2.5-4-2.5z" />
+          <path fill="#ea4335" d="m4 22 10-10 4 2.5z" />
         </svg>
         <span>
-          <small className={styles.caption}>Download APK</small>
-          <strong className={styles.label}>Android</strong>
+          <small className={styles.caption}>Get it on</small>
+          <strong className={styles.label}>Google Play</strong>
         </span>
       </a>
       <a
